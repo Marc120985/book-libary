@@ -36,6 +36,7 @@ public class BookRepo {
        for(Book book : bookList){
            if(book.isbn().equals(isbn)){
                bookList.remove(book);
+               return book;
            }
        }
         throw new NoSuchElementException("Kein Buch mit dieser ISBN zum löschen gefunden");
